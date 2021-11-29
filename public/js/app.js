@@ -28598,27 +28598,7 @@ function _initStripe() {
 
           case 2:
             stripe = _context2.sent;
-            card = null; // function mountWidget() {
-            //     const elements = stripe.elements()
-            //     let style = {
-            //         base: {
-            //             color: '#32325d',
-            //             fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-            //             fontSmoothing: 'antialiased',
-            //             fontSize: '16px',
-            //             '::placeholder': {
-            //                 color: '#aab7c4'
-            //             }
-            //         },
-            //         invalid: {
-            //             color: '#fa755a',
-            //             iconColor: '#fa755a'
-            //         }
-            //     };
-            //     card = elements.create('card', { style, hidePostalCode: true })
-            //     card.mount('#card-element')
-            // }
-
+            card = null;
             paymentType = document.querySelector('#paymentType');
 
             if (paymentType) {
@@ -28689,14 +28669,7 @@ function _initStripe() {
                         case 14:
                           token = _context.sent;
                           formObject.stripeToken = token.id;
-                          Object(_apiService_js__WEBPACK_IMPORTED_MODULE_2__["placeOrder"])(formObject); //verify card
-                          // stripe.createToken(card).then((result) => {
-                          //     console.log(result)
-                          //     formObject.stripeToken = result.token.id
-                          //     placeOrder(formObject)
-                          // }).catch(err => {
-                          //     console.log(err)
-                          // })
+                          Object(_apiService_js__WEBPACK_IMPORTED_MODULE_2__["placeOrder"])(formObject);
 
                         case 17:
                         case "end":

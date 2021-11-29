@@ -1,6 +1,7 @@
 const User = require('../../models/user')
 const bcrypt = require('bcrypt')
 const passport = require('passport')
+const { sendWelcomeEmail } = require('../../emails/account')
 
 function authControler() {
     const _getRedirectUrl = (req) => {
@@ -71,7 +72,8 @@ function authControler() {
                 password: hashedPassword
             })
 
-            user.save().then(() => {
+            user.save().then((r) => {
+                sendWelcomeEmail(r.email, r.name)
                 return res.redirect('/')
             }).catch(err => {
                 req.flash('error', 'Something went wrong')

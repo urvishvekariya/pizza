@@ -13,6 +13,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@sendgrid/mail": "^7.6.0",
     "@stripe/stripe-js": "^1.21.1",
     "axios": "^0.24.0",
     "bcrypt": "^5.0.1",
