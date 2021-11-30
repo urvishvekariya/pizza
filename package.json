@@ -4,6 +4,9 @@
   "description": "this is our realtime food app",
   "main": "index.js",
   "author": "urvish vekariya",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
